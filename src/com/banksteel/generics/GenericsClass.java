@@ -12,8 +12,9 @@ public class GenericsClass<T, V> {
 		return t;
 	}
 
-	public <R> V getString2(V v) {
+	public <R> R getString2(R v) {
 		
 		return v;
 	}
+	
 }
