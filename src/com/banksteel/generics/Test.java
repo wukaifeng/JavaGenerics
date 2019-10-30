@@ -8,13 +8,12 @@ import java.util.List;
  * 1)? 通配符类型<? extends T> 表示类型的上界，表示参数化类型的可能是T 或是 T的子类;
    2)<? super T> 表示类型下界（Java Core中叫超类型限定），表示参数化类型是此类型的超类型（父类型），直至Object;
    3)上界<? extends T>不能往里存，只能往外取
-   4)下界<? super T> 只能往里存，不能往外取
+   4)下界<? super T> 只能往里存，不能往外取, 取的话只能取object类型
   
    PECS原则
             最后看一下什么是PECS（Producer Extends Consumer Super）原则，已经很好理解了：
             
-            频繁往外读取内容的，适合用上界Extends。
-            经常往里插入的，适合用下界Super。
+            频繁往外读取内容的，适合用上界Extends。 经常往里插入的，适合用下界Super。
  *
  */
 public class Test {
